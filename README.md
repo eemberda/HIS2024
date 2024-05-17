@@ -1,4 +1,5 @@
 # HIS2024
+
 Health Information System 2024
 
 ##ACMS
@@ -13,9 +14,12 @@ Pharmacy Management System
 ##CBS
 Clinic Billing System
 
-
 ##UMS
 User Management System
 
 ##RMS
 Rooms Management System
+
+##Supabase
+Name: HIS2024DB
+Pass: PassHIS2024DB
