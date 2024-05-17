@@ -17,7 +17,7 @@ return new class extends Migration
             $table->date("issue_date");
             $table->date("expiry_date");
             $table->string("prescription_status");
-            $table->strng("prescription_type");
+            $table->string("prescription_type");
             $table->timestamps();
         });
     }
