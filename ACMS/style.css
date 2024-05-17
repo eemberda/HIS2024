@@ -1,0 +1,113 @@
+*{margin:0px;
+padding:0px}
+.menubar 
+{
+	text-align:center;
+	background-color:black;
+	}
+.menubar ul li a
+{
+	color:white;
+    text-decoration:none}
+.menubar ul
+{
+	display:inline-flex;
+	list-style:none;
+	}
+.menubar ul li
+{
+	padding:15px;
+    width:120px;
+    margin:15px;
+}
+.menubar ul li:hover
+{
+	background-color:orange;border-radius:10px
+	}
+
+.submenu
+{
+	display:none;
+	z-index:1;
+	}
+
+.menubar ul li:hover .submenu
+{
+	display:block;
+	position:absolute;
+	background-color:black;
+	margin-top:15px;
+	margin-left:-15px;
+	border-radius:10px
+}
+.menubar ul li:hover .submenu ul
+{
+	display:block;margin:10px
+	}
+.menubar ul li:hover .submenu ul li
+{
+	width:100px;padding:10px;
+	border-bottom:1px solid red
+	}
+.ft
+{
+	background-color:black;
+	color:white;
+	width:100%;
+	padding:20px;
+	text-align:center;
+	}
+.bi
+{
+	background-image:url(img/doctar.jpg);
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-attachment:fixed;
+	}
+
+.cont {
+border-radius:1px;
+width:550px;
+height:500px;
+text-align:center;
+position:relative;
+left:700px;
+margin:20px;
+padding:40px;
+background-color:rgba(0,0,0,0.4);
+ }
+.frm {
+
+color:white;
+font-size:30;
+width:400px;
+margin:20px;
+padding:30px;
+background-color:rgba(0,0,0,0.4);
+outline:none;
+border:1px solid #5b80a4;
+transition:0.5s;
+}
+.frm:focus{
+box-shadow:0px 0px 20px 6px #5b80a4;
+
+}
+.cont textarea
+{
+height:200px;
+}
+.frm-btn{
+	height:70px;
+padding:15px 50px;
+background:rgba(0,0,0,0.4);
+color:white;
+outline:none;
+border-radius:30px;
+border:1px solid #5b80a4;
+}
+
+.fld:hover
+	{
+		transform:scale(1.1);
+		box-shadow:2px 4px 3px dodgerblue;
+	}

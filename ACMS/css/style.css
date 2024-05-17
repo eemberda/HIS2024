@@ -1,0 +1,187 @@
+/* Stylesheet 
+ * Authors: Harilekshmi K, Rakhi Dayanandan, Riya Joseph
+ */
+
+*
+   {    
+      margin:0px;
+      padding:0px;
+      box-sizing:border-box;
+	  font-size:15px;
+	  font-family:Constantia;
+	}
+.menubar 
+   {
+	text-align:center;
+	background-color:#1A5F6C;
+	
+	}
+.menubar ul li a
+    {
+	color:white;
+    text-decoration:none;
+	}
+.menubar ul
+   {
+	display:inline-flex;
+	list-style:none;
+	}
+.menubar ul li
+   {
+	padding:15px;
+    width:120px;
+    margin:15px;
+   }
+.menubar ul li:hover
+	{
+		background-color:#6C1A41;
+		border-radius:10px;
+	}
+
+.submenu
+	{
+		display:none;
+		z-index:1;
+	}
+
+.menubar ul li:hover .submenu
+	{
+		display:block;
+		position:absolute;
+		background-color:black;
+		margin-top:15px;
+		margin-left:-15px;
+		border-radius:10px;
+	}
+.menubar ul li:hover .submenu ul
+	{
+		display:block;
+		margin:10px;
+	}
+.menubar ul li:hover .submenu ul li
+	{
+		width:100px;
+		padding:10px;
+		border-bottom:1px solid red;
+    }
+
+.ft
+	{
+		text-align:center;
+		color:red;
+		margin-top:400px;
+		background-color:black;
+	}
+
+.bi
+	{
+		background-image:url(../img/ams.png);
+		background-repeat:no-repeat;
+		background-size:cover;
+
+    }
+b	{
+	  color:white;
+	}
+b a {
+	  text-decoration:none;
+	  color:white;
+	}
+	a {color:white;}
+/*Registration Form*/
+.reg
+	{
+		
+		margin:10px auto;
+		text-align:center;
+		width:500px;
+		background:rgba(26, 95, 108,0.6);
+		padding:20px;
+		border-radius:5px;
+		transition:2s;
+		color:white;
+	}
+
+.fld
+	{
+		width:430px;
+		padding:15px;
+		margin:5px;
+		border-radius:5px;
+		outline:none;
+		color:dodgerblue;
+		border:1px solid dodgerblue;
+	
+	}
+.fldx
+	{
+		width:200px;
+		padding:15px;
+		margin:5px;
+		border-radius:5px;
+		outline:none;
+		color:dodgerblue;
+		border:1px solid dodgerblue;
+	
+	}
+.fld:hover
+	{
+		transform:scale(1.1);
+		box-shadow:2px 4px 3px #1A5F6C;
+	}
+.rad
+	{
+	    width:100px;
+	    padding:5px;
+	    margin:5px;
+	}
+.btn
+	{
+		width:150px;
+		padding:15px;
+		margin:5px;
+		border-radius:5px;
+		border:1px solid dodgerblue;
+		color:blue;
+	}
+
+.col
+	{
+		margin:5px;
+		padding:10px;
+		background:rgba(26,95,108,0.5);
+		text-align:justify;		
+		
+	}
+.col img
+	{
+		width:100px;
+		height:100px;
+		text-align:center;
+		
+	}
+.col a{
+	text-decoration:none;
+}
+	
+.col:hover
+	{
+		transform:scale(1.1);
+	}
+.row
+	{
+		margin:5px;
+		padding:40px;
+		display:inline-flex;
+		margin-bottom:100px;
+		
+	}
+.prfl
+	{
+		border-radius:50%;
+		width:120px;
+		height:150px;
+		border:1px solid black;
+		text-align:center;
+		
+	}
