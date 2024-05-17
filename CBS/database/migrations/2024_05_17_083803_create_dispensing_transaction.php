@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('dispensing_transaction', function (Blueprint $table) {
             $table->id();
+            $table->date("transaction_date");
+            $table->integer("total");
             $table->timestamps();
         });
     }

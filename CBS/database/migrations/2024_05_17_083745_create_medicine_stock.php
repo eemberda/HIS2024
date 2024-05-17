@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('medicine_stock', function (Blueprint $table) {
             $table->id();
+            $table->integer("unit_cost");
+            $table->string("storage_location");
+            $table->integer("m_quantity");
+            $table->date("expiry_date");
             $table->timestamps();
         });
     }

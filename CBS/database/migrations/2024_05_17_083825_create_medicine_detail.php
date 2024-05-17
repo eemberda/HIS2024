@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('medicine_detail', function (Blueprint $table) {
             $table->id();
+            $table->string("brand_name");
+            $table->string("generic_name");
+            $table->integer("price");
+            $table->string("dosage");
+            $table->string("dosage_form");
             $table->timestamps();
         });
     }

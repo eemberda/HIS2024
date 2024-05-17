@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('prescription_detail', function (Blueprint $table) {
             $table->id();
+            $table->string("dosage");
+            $table->string("frequency");
+            $table->string("duration");
+            $table->integer("quantity");
+            $table->string("instruction");
+            $table->string("notes");
             $table->timestamps();
         });
     }
