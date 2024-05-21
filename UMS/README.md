@@ -12,21 +12,21 @@
     
   </div>
 
-How to run this Project:
+# How to run this Project:
 
-Step 1:
+### Step 1:
 Go to the Project folder, the Project folder of UMS looks like this
 ```bash
 ...\HIS2024\UMS\UserMgt
 ```
 
-Step 2:
+### Step 2:
 Install dependencies
 ```bash
 npm install
 ```
 
-Step 3:
+### Step 3:
 Start the development server
 ```bash
 npm run dev
