@@ -17,16 +17,56 @@ export function LoginForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    console.log(loginform.getValues().id)
-    console.log(loginform.getValues().password)
-    navigate('/in')
-    {
-      notifications.show({
-        title: 'Login Successfully',
-        message: 'Good Day Fritz, have a great day ahead',
-        autoClose: 1000,
-        withCloseButton: false,
-      })
+
+    if (
+      loginform.getValues().id == '05222024' &&
+      loginform.getValues().password == 'admin2024'
+    ) {
+      navigate('/in')
+      {
+        notifications.show({
+          title: 'Login Successfully',
+          message: 'Good Day Fritz, have a great day ahead',
+          autoClose: 1000,
+          withCloseButton: false,
+        })
+      }
+    } else if (
+      loginform.getValues().id == '05222024' &&
+      loginform.getValues().password != 'admin2024'
+    ) {
+      {
+        notifications.show({
+          title: 'Inccorect Password',
+          message: 'Please enter the correct Password',
+          autoClose: 1000,
+          withCloseButton: false,
+          color: 'red',
+        })
+      }
+    } else if (
+      loginform.getValues().id != '05222024' &&
+      loginform.getValues().password == 'admin2024'
+    ) {
+      {
+        notifications.show({
+          title: 'Inccorect ID',
+          message: 'Please enter the correct ID',
+          autoClose: 1000,
+          withCloseButton: false,
+          color: 'red',
+        })
+      }
+    } else {
+      {
+        notifications.show({
+          title: 'Inccorect Credenntials',
+          message: 'Please enter the correct credenntials',
+          autoClose: 1000,
+          withCloseButton: false,
+          color: 'red',
+        })
+      }
     }
   }
 

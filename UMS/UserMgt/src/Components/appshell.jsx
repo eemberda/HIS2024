@@ -21,10 +21,11 @@ import { LuUsers } from 'react-icons/lu'
 import { TbUsersGroup, TbReportSearch } from 'react-icons/tb'
 import { BsMoon, BsSun } from 'react-icons/bs'
 import { RiBuilding2Line } from 'react-icons/ri'
-import Logo from '../assets/UMSLOGO.png' // Adjust the path accordingly
+import Logo from '../assets/UMSLOGO.png'
 
 import { useNavigate } from 'react-router-dom'
 import { notifications } from '@mantine/notifications'
+import { Suspense } from 'react'
 
 export default function Appshell({ TheContent }) {
   const [mobileOpened, { toggle: toggleMobile }] = useDisclosure()
@@ -110,31 +111,33 @@ export default function Appshell({ TheContent }) {
             gap={rem(260)}
           >
             <SimpleGrid cols={1}>
-              <NavLink
-                to="/in"
-                Label={'Dashboard'}
-                Icon={<RiDashboardHorizontalLine size="1.5rem" />}
-              />
-              <NavLink
-                to="/in/UserMgt"
-                Label={'User Management'}
-                Icon={<LuUsers size="1.5rem" />}
-              />
-              <NavLink
-                to="/in/Positions"
-                Label={'Positions'}
-                Icon={<TbUsersGroup size="1.5rem" />}
-              />
-              <NavLink
-                to="/in/Departments"
-                Label={'Departments'}
-                Icon={<RiBuilding2Line size="1.5rem" />}
-              />
-              <NavLink
-                to="/in/Reports"
-                Label={'Reports'}
-                Icon={<TbReportSearch size="1.5rem" />}
-              />
+             
+                <NavLink
+                  to="/in"
+                  Label={'Dashboard'}
+                  Icon={<RiDashboardHorizontalLine size="1.5rem" />}
+                />
+                <NavLink
+                  to="/in/UserMgt"
+                  Label={'User Management'}
+                  Icon={<LuUsers size="1.5rem" />}
+                />
+                <NavLink
+                  to="/in/Positions"
+                  Label={'Positions'}
+                  Icon={<TbUsersGroup size="1.5rem" />}
+                />
+                <NavLink
+                  to="/in/Departments"
+                  Label={'Departments'}
+                  Icon={<RiBuilding2Line size="1.5rem" />}
+                />
+                <NavLink
+                  to="/in/Reports"
+                  Label={'Reports'}
+                  Icon={<TbReportSearch size="1.5rem" />}
+                />
+              
             </SimpleGrid>
             <Button
               variant="filled"
