@@ -3,8 +3,11 @@
 import { UMSButton } from '../Components/components'
 import { Group, TextInput, PasswordInput } from '@mantine/core'
 import { useForm } from '@mantine/form'
+import { useNavigate } from 'react-router-dom'
+import { notifications } from '@mantine/notifications'
 
-export function loginForm() {
+export function LoginForm() {
+  const navigate = useNavigate()
   const loginform = useForm({
     initialValues: {
       id: '',
@@ -16,7 +19,17 @@ export function loginForm() {
     event.preventDefault()
     console.log(loginform.getValues().id)
     console.log(loginform.getValues().password)
+    navigate('/in')
+    {
+      notifications.show({
+        title: 'Login Successfully',
+        message: 'Good Day Fritz, have a great day ahead',
+        autoClose: 1000,
+        withCloseButton: false,
+      })
+    }
   }
+
   return (
     <>
       <form onSubmit={handleSubmit}>

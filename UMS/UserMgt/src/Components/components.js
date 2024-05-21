@@ -8,7 +8,7 @@ export {
 } from './modal'
 export { default as UMSButton } from './button'
 export { default as UMSCard } from './card'
-export { AddDepartmentForm, AddPositionForm, loginForm } from './form'
+export { AddDepartmentForm, AddPositionForm, LoginForm } from './form'
 export { TableReport } from './table'
 // Navbar Components
 export { default as NavLink } from './NavBarCoponents/navlink'

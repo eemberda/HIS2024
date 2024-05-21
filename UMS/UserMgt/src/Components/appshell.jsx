@@ -9,6 +9,8 @@ import {
   Image,
   Text,
   rem,
+  SimpleGrid,
+  Button,
 } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 
@@ -20,11 +22,30 @@ import { TbUsersGroup, TbReportSearch } from 'react-icons/tb'
 import { BsMoon, BsSun } from 'react-icons/bs'
 import { RiBuilding2Line } from 'react-icons/ri'
 import Logo from '../assets/UMSLOGO.png' // Adjust the path accordingly
+
+import { useNavigate } from 'react-router-dom'
+import { notifications } from '@mantine/notifications'
+
 export default function Appshell({ TheContent }) {
   const [mobileOpened, { toggle: toggleMobile }] = useDisclosure()
   const [desktopOpened, { toggle: toggleDesktop }] = useDisclosure(true)
   const { colorScheme, toggleColorScheme } = useMantineColorScheme()
   const dark = colorScheme === 'dark'
+
+  const navigate = useNavigate()
+
+  const logout = () => {
+    navigate('/')
+    {
+      notifications.show({
+        color: 'red',
+        title: 'Logout Successfully',
+        message: 'Thank you for using, have a great Time',
+        autoClose: 1000,
+        withCloseButton: false,
+      })
+    }
+  }
   return (
     <>
       <AppShell
@@ -37,13 +58,7 @@ export default function Appshell({ TheContent }) {
         p="md"
       >
         <AppShell.Header>
-          <Flex
-            direction="row"
-            align="center"
-            justify="space-between"
-            
-            mr={25}
-          >
+          <Flex direction="row" align="center" justify="space-between" mr={25}>
             <Group p={10}>
               <Burger
                 opened={mobileOpened}
@@ -71,6 +86,7 @@ export default function Appshell({ TheContent }) {
                 </Text>
               </Group>
             </Group>
+
             <ActionIcon
               variant="outline"
               color={dark ? 'yellow' : 'Black'}
@@ -87,31 +103,47 @@ export default function Appshell({ TheContent }) {
         </AppShell.Header>
 
         <AppShell.Navbar p="md">
-          <NavLink
-            to="/in"
-            Label={'Dashboard'}
-            Icon={<RiDashboardHorizontalLine size="1.5rem" />}
-          />
-          <NavLink
-            to="/in/UserMgt"
-            Label={'User Management'}
-            Icon={<LuUsers size="1.5rem" />}
-          />
-          <NavLink
-            to="/in/Positions"
-            Label={'Positions'}
-            Icon={<TbUsersGroup size="1.5rem" />}
-          />
-          <NavLink
-            to="/in/Departments"
-            Label={'Departments'}
-            Icon={<RiBuilding2Line size="1.5rem" />}
-          />
-          <NavLink
-            to="/in/Reports"
-            Label={'Reports'}
-            Icon={<TbReportSearch size="1.5rem" />}
-          />
+          <Flex
+            direction="column"
+            align="stretch"
+            justify="space-between"
+            gap={rem(260)}
+          >
+            <SimpleGrid cols={1}>
+              <NavLink
+                to="/in"
+                Label={'Dashboard'}
+                Icon={<RiDashboardHorizontalLine size="1.5rem" />}
+              />
+              <NavLink
+                to="/in/UserMgt"
+                Label={'User Management'}
+                Icon={<LuUsers size="1.5rem" />}
+              />
+              <NavLink
+                to="/in/Positions"
+                Label={'Positions'}
+                Icon={<TbUsersGroup size="1.5rem" />}
+              />
+              <NavLink
+                to="/in/Departments"
+                Label={'Departments'}
+                Icon={<RiBuilding2Line size="1.5rem" />}
+              />
+              <NavLink
+                to="/in/Reports"
+                Label={'Reports'}
+                Icon={<TbReportSearch size="1.5rem" />}
+              />
+            </SimpleGrid>
+            <Button
+              variant="filled"
+              color={dark ? 'red' : 'red'}
+              onClick={logout}
+            >
+              Logout
+            </Button>
+          </Flex>
         </AppShell.Navbar>
 
         <AppShell.Main>{TheContent}</AppShell.Main>

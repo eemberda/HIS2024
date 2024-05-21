@@ -1,5 +1,4 @@
 import { Area_Chart, Line_Chart, Pie_Chart } from '../Components/components'
-
 export default function dashboard() {
   return (
     <>
@@ -8,6 +7,8 @@ export default function dashboard() {
       <Area_Chart />
 
       <Line_Chart />
+
+      
     </>
   )
 }
