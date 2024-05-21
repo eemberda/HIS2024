@@ -1,35 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import '@mantine/core/styles.css'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+import { Routes, Route } from 'react-router-dom'
+import {
+  LoginPage,
+  HomePage,
+  Dashboard,
+  Departments,
+  Positions,
+  Reports,
+  UserMgt,
+} from './Pages/pages'
+export default function App() {
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+
+        <Route path="/in" element={<HomePage />}>
+          <Route index="true" element={<Dashboard />} />
+          <Route path="/in/Positions" element={<Positions />} />
+          <Route path="/in/Departments" element={<Departments />} />
+          <Route path="/in/UserMgt" element={<UserMgt />} />
+          <Route path="/in/Reports" element={<Reports />} />
+        </Route>
+      </Routes>
     </>
   )
 }
-
-export default App

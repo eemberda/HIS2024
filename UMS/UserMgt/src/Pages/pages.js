@@ -1,0 +1,7 @@
+export { default as LoginPage } from './loginPage'
+export { default as HomePage } from './homepage'
+export { default as Dashboard } from './dashboard'
+export { default as UserMgt } from './usermgt'
+export { default as Positions } from './Positions'
+export { default as Departments } from './department'
+export { default as Reports } from './Reports'
