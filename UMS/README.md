@@ -21,11 +21,14 @@ Go to the Project folder, the Project folder of UMS looks like this
 ```
 
 ### Step 2:
-Install dependencies
+Install NPM dependencies
 ```bash
 npm install
 ```
-
+Install Mantine dependencies
+```bash
+npm install @mantine/core @mantine/hooks @mantine/form @mantine/dates dayjs @mantine/charts recharts@2 @mantine/notifications @mantine/code-highlight @mantine/tiptap @tabler/icons-react @tiptap/react @tiptap/extension-link @tiptap/starter-kit @mantine/dropzone @mantine/carousel embla-carousel-react @mantine/spotlight @mantine/modals @mantine/nprogress
+```
 ### Step 3:
 Start the development server
 ```bash
