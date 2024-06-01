@@ -19,6 +19,7 @@ export default function usermgt() {
   const [isLoading, setIsLoading] = useState(true)
 
   const searchBar = useForm({
+
     initialValues: {
       searchInput: '',
     },
@@ -69,11 +70,13 @@ export default function usermgt() {
     fetchData()
   }, [searchBar.values.searchInput])
 
+
   return (
     <>
       <Title order={1} mb={30}>
         Registered Users
       </Title>
+
       <form
         onSubmit={(e) => {
           e.preventDefault()
@@ -92,6 +95,7 @@ export default function usermgt() {
           {...searchBar.getInputProps('searchInput')}
         />
       </form>
+
       <SimpleGrid cols={4} mt={rem(50)}>
         {isLoading ? (
           <>
@@ -111,6 +115,7 @@ export default function usermgt() {
           ))
         )}
       </SimpleGrid>
+
     </>
   )
 }

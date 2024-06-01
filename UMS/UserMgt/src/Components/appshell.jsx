@@ -25,7 +25,7 @@ import Logo from '../assets/UMSLOGO.png'
 
 import { useNavigate } from 'react-router-dom'
 import { notifications } from '@mantine/notifications'
-import { Suspense } from 'react'
+// import { Suspense } from 'react'
 
 export default function Appshell({ TheContent }) {
   const [mobileOpened, { toggle: toggleMobile }] = useDisclosure()
