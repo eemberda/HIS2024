@@ -23,6 +23,9 @@
     <!-- Custom styles for this page -->
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
+    <!-- Bootstrap Datepicker -->
+    <link href="vendor/datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+
 </head>
 
 <body id="page-top">
@@ -181,15 +184,16 @@
                             <h1 class="h3 mb-2 text-gray-800">Inventory</h1>
                             <p class="mb-4">List of Medicines inside the inventory</p>
                         </div>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-md btn-primary shadow-md"><i
-                            class="fas fa-plus fa-sm text-white-50"></i> Add New Medicine</a>
+                        <a href="#" class="d-none d-sm-inline-block btn btn-md btn-primary shadow-md" data-toggle="modal" data-target="#addmedicine">
+                            <i class="fas fa-plus fa-sm text-white-50"></i> Add New Medicine
+                        </a>
                     </div>
                     
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <table class="table table-bordered" id="medicineDataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
                                             <th>Name</th>
@@ -218,10 +222,10 @@
                                             <td>99</td>
                                             <td>17/05/2024</td>
                                             <td>
-                                                <a href="#" class="btn btn-warning btn-circle btn-sm">
+                                                <a href="#" class="btn btn-warning btn-circle btn-sm" data-toggle="modal" data-target="#editmedicine">
                                                     <i class="fas fa-cogs"></i>
                                                 </a>
-                                                <a href="#" class="btn btn-danger btn-circle btn-sm">
+                                                <a href="#" class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#deletemedicine">
                                                     <i class="fas fa-trash"></i>
                                                 </a>
                                             </td>
@@ -233,10 +237,10 @@
                                             <td>99</td>
                                             <td>17/05/2024</td>
                                             <td>
-                                                <a href="#" class="btn btn-warning btn-circle btn-sm">
+                                                <a href="#" class="btn btn-warning btn-circle btn-sm" data-toggle="modal" data-target="#editmedicine">
                                                     <i class="fas fa-cogs"></i>
                                                 </a>
-                                                <a href="#" class="btn btn-danger btn-circle btn-sm">
+                                                <a href="#" class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#deletemedicine">
                                                     <i class="fas fa-trash"></i>
                                                 </a>
                                             </td>
@@ -248,10 +252,10 @@
                                             <td>99</td>
                                             <td>17/05/2024</td>
                                             <td>
-                                                <a href="#" class="btn btn-warning btn-circle btn-sm">
+                                                <a href="#" class="btn btn-warning btn-circle btn-sm" data-toggle="modal" data-target="#editmedicine">
                                                     <i class="fas fa-cogs"></i>
                                                 </a>
-                                                <a href="#" class="btn btn-danger btn-circle btn-sm">
+                                                <a href="#" class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#deletemedicine">
                                                     <i class="fas fa-trash"></i>
                                                 </a>
                                             </td>
@@ -263,10 +267,10 @@
                                             <td>99</td>
                                             <td>17/05/2024</td>
                                             <td>
-                                                <a href="#" class="btn btn-warning btn-circle btn-sm">
+                                                <a href="#" class="btn btn-warning btn-circle btn-sm" data-toggle="modal" data-target="#editmedicine">
                                                     <i class="fas fa-cogs"></i>
                                                 </a>
-                                                <a href="#" class="btn btn-danger btn-circle btn-sm">
+                                                <a href="#" class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#deletemedicine">
                                                     <i class="fas fa-trash"></i>
                                                 </a>
                                             </td>
@@ -278,10 +282,10 @@
                                             <td>99</td>
                                             <td>17/05/2024</td>
                                             <td>
-                                                <a href="#" class="btn btn-warning btn-circle btn-sm">
+                                                <a href="#" class="btn btn-warning btn-circle btn-sm" data-toggle="modal" data-target="#editmedicine">
                                                     <i class="fas fa-cogs"></i>
                                                 </a>
-                                                <a href="#" class="btn btn-danger btn-circle btn-sm">
+                                                <a href="#" class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#deletemedicine">
                                                     <i class="fas fa-trash"></i>
                                                 </a>
                                             </td>
@@ -293,10 +297,10 @@
                                             <td>99</td>
                                             <td>17/05/2024</td>
                                             <td>
-                                                <a href="#" class="btn btn-warning btn-circle btn-sm">
+                                                <a href="#" class="btn btn-warning btn-circle btn-sm" data-toggle="modal" data-target="#editmedicine">
                                                     <i class="fas fa-cogs"></i>
                                                 </a>
-                                                <a href="#" class="btn btn-danger btn-circle btn-sm">
+                                                <a href="#" class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#deletemedicine">
                                                     <i class="fas fa-trash"></i>
                                                 </a>
                                             </td>
@@ -308,10 +312,10 @@
                                             <td>99</td>
                                             <td>17/05/2024</td>
                                             <td>
-                                                <a href="#" class="btn btn-warning btn-circle btn-sm">
+                                                <a href="#" class="btn btn-warning btn-circle btn-sm" data-toggle="modal" data-target="#editmedicine">
                                                     <i class="fas fa-cogs"></i>
                                                 </a>
-                                                <a href="#" class="btn btn-danger btn-circle btn-sm">
+                                                <a href="#" class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#deletemedicine">
                                                     <i class="fas fa-trash"></i>
                                                 </a>
                                             </td>
@@ -323,10 +327,10 @@
                                             <td>99</td>
                                             <td>17/05/2024</td>
                                             <td>
-                                                <a href="#" class="btn btn-warning btn-circle btn-sm">
+                                                <a href="#" class="btn btn-warning btn-circle btn-sm" data-toggle="modal" data-target="#editmedicine">
                                                     <i class="fas fa-cogs"></i>
                                                 </a>
-                                                <a href="#" class="btn btn-danger btn-circle btn-sm">
+                                                <a href="#" class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#deletemedicine">
                                                     <i class="fas fa-trash"></i>
                                                 </a>
                                             </td>
@@ -338,10 +342,10 @@
                                             <td>99</td>
                                             <td>17/05/2024</td>
                                             <td>
-                                                <a href="#" class="btn btn-warning btn-circle btn-sm">
+                                                <a href="#" class="btn btn-warning btn-circle btn-sm" data-toggle="modal" data-target="#editmedicine">
                                                     <i class="fas fa-cogs"></i>
                                                 </a>
-                                                <a href="#" class="btn btn-danger btn-circle btn-sm">
+                                                <a href="#" class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#deletemedicine">
                                                     <i class="fas fa-trash"></i>
                                                 </a>
                                             </td>
@@ -353,10 +357,10 @@
                                             <td>99</td>
                                             <td>17/05/2024</td>
                                             <td>
-                                                <a href="#" class="btn btn-warning btn-circle btn-sm">
+                                                <a href="#" class="btn btn-warning btn-circle btn-sm" data-toggle="modal" data-target="#editmedicine">
                                                     <i class="fas fa-cogs"></i>
                                                 </a>
-                                                <a href="#" class="btn btn-danger btn-circle btn-sm">
+                                                <a href="#" class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#deletemedicine">
                                                     <i class="fas fa-trash"></i>
                                                 </a>
                                             </td>
@@ -368,10 +372,10 @@
                                             <td>99</td>
                                             <td>17/05/2024</td>
                                             <td>
-                                                <a href="#" class="btn btn-warning btn-circle btn-sm">
+                                                <a href="#" class="btn btn-warning btn-circle btn-sm" data-toggle="modal" data-target="#editmedicine">
                                                     <i class="fas fa-cogs"></i>
                                                 </a>
-                                                <a href="#" class="btn btn-danger btn-circle btn-sm">
+                                                <a href="#" class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#deletemedicine">
                                                     <i class="fas fa-trash"></i>
                                                 </a>
                                             </td>
@@ -383,10 +387,10 @@
                                             <td>99</td>
                                             <td>17/05/2024</td>
                                             <td>
-                                                <a href="#" class="btn btn-warning btn-circle btn-sm">
+                                                <a href="#" class="btn btn-warning btn-circle btn-sm" data-toggle="modal" data-target="#editmedicine">
                                                     <i class="fas fa-cogs"></i>
                                                 </a>
-                                                <a href="#" class="btn btn-danger btn-circle btn-sm">
+                                                <a href="#" class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#deletemedicine">
                                                     <i class="fas fa-trash"></i>
                                                 </a>
                                             </td>
@@ -398,10 +402,10 @@
                                             <td>99</td>
                                             <td>17/05/2024</td>
                                             <td>
-                                                <a href="#" class="btn btn-warning btn-circle btn-sm">
+                                                <a href="#" class="btn btn-warning btn-circle btn-sm" data-toggle="modal" data-target="#editmedicine">
                                                     <i class="fas fa-cogs"></i>
                                                 </a>
-                                                <a href="#" class="btn btn-danger btn-circle btn-sm">
+                                                <a href="#" class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#deletemedicine">
                                                     <i class="fas fa-trash"></i>
                                                 </a>
                                             </td>
@@ -413,10 +417,10 @@
                                             <td>99</td>
                                             <td>17/05/2024</td>
                                             <td>
-                                                <a href="#" class="btn btn-warning btn-circle btn-sm">
+                                                <a href="#" class="btn btn-warning btn-circle btn-sm" data-toggle="modal" data-target="#editmedicine">
                                                     <i class="fas fa-cogs"></i>
                                                 </a>
-                                                <a href="#" class="btn btn-danger btn-circle btn-sm">
+                                                <a href="#" class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#deletemedicine">
                                                     <i class="fas fa-trash"></i>
                                                 </a>
                                             </td>
@@ -428,10 +432,10 @@
                                             <td>99</td>
                                             <td>17/05/2024</td>
                                             <td>
-                                                <a href="#" class="btn btn-warning btn-circle btn-sm">
+                                                <a href="#" class="btn btn-warning btn-circle btn-sm" data-toggle="modal" data-target="#editmedicine">
                                                     <i class="fas fa-cogs"></i>
                                                 </a>
-                                                <a href="#" class="btn btn-danger btn-circle btn-sm">
+                                                <a href="#" class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#deletemedicine">
                                                     <i class="fas fa-trash"></i>
                                                 </a>
                                             </td>
@@ -443,10 +447,10 @@
                                             <td>99</td>
                                             <td>17/05/2024</td>
                                             <td>
-                                                <a href="#" class="btn btn-warning btn-circle btn-sm">
+                                                <a href="#" class="btn btn-warning btn-circle btn-sm" data-toggle="modal" data-target="#editmedicine">
                                                     <i class="fas fa-cogs"></i>
                                                 </a>
-                                                <a href="#" class="btn btn-danger btn-circle btn-sm">
+                                                <a href="#" class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#deletemedicine">
                                                     <i class="fas fa-trash"></i>
                                                 </a>
                                             </td>
@@ -458,10 +462,10 @@
                                             <td>99</td>
                                             <td>17/05/2024</td>
                                             <td>
-                                                <a href="#" class="btn btn-warning btn-circle btn-sm">
+                                                <a href="#" class="btn btn-warning btn-circle btn-sm" data-toggle="modal" data-target="#editmedicine">
                                                     <i class="fas fa-cogs"></i>
                                                 </a>
-                                                <a href="#" class="btn btn-danger btn-circle btn-sm">
+                                                <a href="#" class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#deletemedicine">
                                                     <i class="fas fa-trash"></i>
                                                 </a>
                                             </td>
@@ -473,10 +477,10 @@
                                             <td>99</td>
                                             <td>17/05/2024</td>
                                             <td>
-                                                <a href="#" class="btn btn-warning btn-circle btn-sm">
+                                                <a href="#" class="btn btn-warning btn-circle btn-sm" data-toggle="modal" data-target="#editmedicine">
                                                     <i class="fas fa-cogs"></i>
                                                 </a>
-                                                <a href="#" class="btn btn-danger btn-circle btn-sm">
+                                                <a href="#" class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#deletemedicine">
                                                     <i class="fas fa-trash"></i>
                                                 </a>
                                             </td>
@@ -488,10 +492,10 @@
                                             <td>99</td>
                                             <td>17/05/2024</td>
                                             <td>
-                                                <a href="#" class="btn btn-warning btn-circle btn-sm">
+                                                <a href="#" class="btn btn-warning btn-circle btn-sm" data-toggle="modal" data-target="#editmedicine">
                                                     <i class="fas fa-cogs"></i>
                                                 </a>
-                                                <a href="#" class="btn btn-danger btn-circle btn-sm">
+                                                <a href="#" class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#deletemedicine">
                                                     <i class="fas fa-trash"></i>
                                                 </a>
                                             </td>
@@ -503,10 +507,10 @@
                                             <td>99</td>
                                             <td>17/05/2024</td>
                                             <td>
-                                                <a href="#" class="btn btn-warning btn-circle btn-sm">
+                                                <a href="#" class="btn btn-warning btn-circle btn-sm" data-toggle="modal" data-target="#editmedicine">
                                                     <i class="fas fa-cogs"></i>
                                                 </a>
-                                                <a href="#" class="btn btn-danger btn-circle btn-sm">
+                                                <a href="#" class="btn btn-danger btn-circle btn-sm" data-toggle="modal" data-target="#deletemedicine">
                                                     <i class="fas fa-trash"></i>
                                                 </a>
                                             </td>
@@ -527,7 +531,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Copyright &copy; CCS</span>
                     </div>
                 </div>
             </footer>
@@ -543,6 +547,128 @@
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
+
+    <!-- Add New Medicine Modal-->
+    <div class="modal fade" id="addmedicine" tabindex="-1" role="dialog" aria-labelledby="addMedicineLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form action="/" method="POST">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addMedicineLabel">New Medicine</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="medicinename">Medicine Name:</label>
+                            <input type="text" class="form-control" id="medicinename" />
+                        </div>
+                        <div class="form-group">
+                            <label for="storage">Storage Location:</label>
+                            <input type="text" class="form-control" id="storage" />
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="quantity">Quantity:</label>
+                                    <input type="number" class="form-control" id="quantity" />
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="unitcost">Unit Cost:</label>
+                                    <input type="number" class="form-control" id="unitcost" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="expirationdate">Expiration Date:</label>
+                            <input type="text" class="form-control" id="expirationdate" data-provide="datepicker" class="datepicker" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <button class="btn btn-primary" type="button">Add Medicine</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Medicine Modal-->
+    <div class="modal fade" id="editmedicine" tabindex="-1" role="dialog" aria-labelledby="editMedicineLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form action="/" method="POST">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editMedicineLabel">Edit Medicine</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="medicinename">Medicine Name:</label>
+                            <input type="text" class="form-control" id="medicinename" />
+                        </div>
+                        <div class="form-group">
+                            <label for="storage">Storage Location:</label>
+                            <input type="text" class="form-control" id="storage" />
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="quantity">Quantity:</label>
+                                    <input type="number" class="form-control" id="quantity" />
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="unitcost">Unit Cost:</label>
+                                    <input type="number" class="form-control" id="unitcost" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="expirationdate">Expiration Date:</label>
+                            <input type="text" class="form-control" id="expirationdate" data-provide="datepicker" class="datepicker" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <button class="btn btn-primary" type="button">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Medicine Modal-->
+    <div class="modal fade" id="deletemedicine" tabindex="-1" role="dialog" aria-labelledby="deleteMedicineLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form action="/" method="POST">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editMedicineLabel">Delete</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete <span class="text-danger"></span>?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <button class="btn btn-danger" type="button">Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -580,6 +706,71 @@
 
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
+
+    <!-- Bootstrap Datepicker -->
+    <script src="vendor/datepicker/js/bootstrap-datepicker.min.js"></script>
+
+    <!-- Bootstrap Datepicker Script -->
+    <script>
+        $('.datepicker').datepicker({
+            todayHighlight: true
+        });
+    </script>
+
+    <!-- Add Data Attribute to Edit Button-->
+    <script>
+    $('#medicineDataTable tbody tr').each(function() {
+        const $row = $(this);
+        const name = $row.find('td:eq(0)').text();
+        const storageLocation = $row.find('td:eq(1)').text();
+        const quantity = $row.find('td:eq(2)').text();
+        const unitCost = $row.find('td:eq(3)').text();
+        const expirationDate = $row.find('td:eq(4)').text();
+
+        const $editButton = $row.find('.btn-warning');
+        const $deleteButton = $row.find('.btn-danger');
+
+        $editButton.attr('data-medicine-name', name);
+        $editButton.attr('data-storage-location', storageLocation);
+        $editButton.attr('data-quantity', quantity);
+        $editButton.attr('data-unit-cost', unitCost);
+        $editButton.attr('data-expiration-date', expirationDate);
+
+        $deleteButton.attr('data-medicine-name', name);
+    });
+    </script>
+
+    <!-- Varying Modal Content-->
+    <script>
+        // Edit Medicine Modal
+        $('#editmedicine').on('show.bs.modal', function(event) {
+        var button = $(event.relatedTarget); // Button that triggered the modal
+        var medicineName = button.data('medicine-name');
+        var storageLocation = button.data('storage-location');
+        var quantity = button.data('quantity');
+        var unitCost = button.data('unit-cost');
+        var expirationDate = button.data('expiration-date');
+
+        var modal = $(this);
+        modal.find('.modal-title').text('Edit ' + medicineName);
+        modal.find('input#medicinename').val(medicineName);
+        modal.find('input#storage').val(storageLocation);
+        modal.find('input#quantity').val(quantity);
+        modal.find('input#unitcost').val(unitCost);
+        modal.find('input#expirationdate').val(expirationDate);
+        })
+
+        // Delete Medicine Modal
+        $('#deletemedicine').on('show.bs.modal', function(event) {
+        var button = $(event.relatedTarget); // Button that triggered the modal
+        var medicineName = button.data('medicine-name');
+
+        var modal = $(this);
+        modal.find('.modal-title').text('Delete ' + medicineName);
+        modal.find('p span.text-danger').text(medicineName);
+        })
+    </script>
+    
 
 </body>
 
